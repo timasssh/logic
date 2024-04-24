@@ -1,9 +1,9 @@
 function narcissistic(value) {
-    const splitedValue = value.toString().split("").map(parseFloat);
+    const splitedValue = Array.from(value.toString(), Number);
     
     let counter = 0;
     splitedValue.forEach((number) => {
-      counter += Math.pow(number, splitedValue.length);
+      counter += number ** splitedValue.length
     });
     
     return counter === value;
