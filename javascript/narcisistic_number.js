@@ -8,3 +8,5 @@ function narcissistic(value) {
     
     return counter === value;
 }
+
+module.exports = narcissistic;
